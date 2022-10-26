@@ -76,7 +76,7 @@ header .clearfix{
 }
 #contain-center{
     width: 80%;
-    height: 400vh;
+    height: 340vh;
     margin-top: 0vh;
     background: white;
     z-index: -1;
@@ -157,7 +157,52 @@ h3{
     font-weight: 500;
     font-size: large;
 }
-.xemthem{
-    overflow: hidden;
+.item .xemthem{
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    transition-delay: 0.4s;
 }
+.item:hover .xemthem{
+    visibility: visible;
+    opacity: 100%;
+}
+.item:hover .xemthem{
+    transform: translateY(-90px);
+}
+.doitac-title{
+    width: 100vw;
+    height: 12vh;
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#branch{
+    display: flex;
+    padding: 0 15vw;
+    justify-content: space-around;
+    background-color: white;
+}
+#line-footer{
+    width: 100vw;
+    height: 5vh;
+    background: url(line.png);
+}
+#main-footer{
+    display: flex;
+    justify-content: space-around;
+    padding: 10vh 10vw;
+    background-color: var(--primary-color);
+}
+#copyright{
+    height: 4vh;
+    padding-top: 7px;
+    font-size: small;
+    text-align: center;
+    color: white;
+    background-color: #1dbe1d;
+}
+
+
 
