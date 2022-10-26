@@ -1,0 +1,163 @@
+:root{
+    --primary-color:#95d687 ;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+} 
+body{
+    font-family: sans-serif;
+    background: var(--primary-color) url(bg.png)no-repeat top center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+header .index_fixed{
+    background-color: var(--primary-color);
+}
+header .clearfix{
+    display: fixed;
+    margin-top: -50px;
+    width: 100vw;
+    height: 13px;
+    background: url(line.png);
+}
+.back-to-top img{
+    right: 25px;
+    bottom: 25px;
+    position: fixed;
+    z-index: 15;
+}
+.menu ul{
+    height: 15vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 20px;
+}
+.menu ul li a span{
+    color: rgb(48, 37, 37);
+    padding: 0 30px;
+}
+.menu ul li a span:hover{
+    color: white;
+    padding: 0 30px;
+    background-color:#184425;
+}
+.search form input{
+    height: 25px;
+    border: 2px;
+    padding-left: 10px;
+    border-color: black;
+    border-radius: 5px;
+    position: relative;
+
+}
+.search form button{
+    position: absolute;
+    margin-left: -20px;
+    margin-top: 3px;
+    border: none;
+    cursor: pointer;
+}
+#xmove{
+    display: flex;
+    justify-content: center;
+}
+#page-wrapper{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+#contain-center{
+    width: 80%;
+    height: 400vh;
+    margin-top: 0vh;
+    background: white;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+}
+#wrap-index{
+    width: 105%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10%;
+    padding-bottom: 12%;
+}
+#wrap-index img{
+    height: 110%;
+    width: 40vw;
+    clip-path: polygon(0 0, 75% 0, 100% 100%, 0 100%);
+}
+#image2 img{
+    clip-path: none;
+    clip-path: polygon(25% 0, 100% 0, 100% 100%, 0 100%)
+}
+#wrap-index div{
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 16px;
+    font-weight: 600;
+    height: 30vh;
+    width: 25vw;
+    text-align: left;
+    color: #509950;
+}
+h3{
+    font-family: 'Dancing Script';
+    font-size: 50px;
+    font-style: italic;
+    text-transform: capitalize;
+    font-weight: 500;
+    line-height: 1.1;
+    color: #184425;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+#wrap-index div:nth-child(2){
+    text-align: none;
+    text-align: right;
+}
+#wrap-index button{
+    width: 90px;
+    height: 30px;
+    font-size: 15px;
+    color: white;
+    background-color: #55b041;
+    border: none;
+    margin-top: 20px;
+}
+.wrap__news{
+    display: flex;
+    width: 200px
+}
+#global__title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#global__title h3{
+    padding: 2%;
+}
+.item{
+    padding: 5% 5%;
+}
+.item img{
+    border-radius: 5px;
+}
+.item h4 a{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #509950;
+    font-weight: 500;
+    font-size: large;
+}
+.xemthem{
+    overflow: hidden;
+}
+
