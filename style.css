@@ -157,19 +157,6 @@ h3{
     font-weight: 500;
     font-size: large;
 }
-.item .xemthem{
-    visibility: hidden;
-    opacity: 0;
-    transition: 0.5s;
-    transition-delay: 0.4s;
-}
-.item:hover .xemthem{
-    visibility: visible;
-    opacity: 100%;
-}
-.item:hover .xemthem{
-    transform: translateY(-90px);
-}
 .doitac-title{
     width: 100vw;
     height: 12vh;
@@ -295,7 +282,6 @@ h3{
         left: -100%;
         transition: all .5s;
         display: flex;
-        align-items: center;
         flex-direction: column;
     }
     .menu ul li{
