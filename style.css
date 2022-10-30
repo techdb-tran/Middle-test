@@ -18,11 +18,11 @@ body{
 header .index_fixed{
     background-color: var(--primary-color);
 }
-header .clearfix{
+header .line-header{
     display: fixed;
     margin-top: -50px;
     width: 100vw;
-    height: 13px;
+    height: 12px;
     background: url(line.png);
 }
 .back-to-top img{
@@ -32,7 +32,7 @@ header .clearfix{
     z-index: 15;
 }
 .menu ul{
-    height: 15vh;
+    height: 100px;
     width: 100vw;
     display: flex;
     justify-content: center;
@@ -42,6 +42,10 @@ header .clearfix{
 .menu ul li a span{
     color: rgb(48, 37, 37);
     padding: 0 30px;
+}
+.menu ul li a img{
+    position: relative;
+    z-index: 2;
 }
 .menu ul li a span:hover{
     color: white;
@@ -55,7 +59,6 @@ header .clearfix{
     border-color: black;
     border-radius: 5px;
     position: relative;
-
 }
 .search form button{
     position: absolute;
@@ -64,42 +67,40 @@ header .clearfix{
     border: none;
     cursor: pointer;
 }
-#xmove{
+.container{
     display: flex;
     justify-content: center;
 }
-#page-wrapper{
+.container .page-wrapper{
     display: flex;
     justify-content: center;
     width: 100%;
-    height: 100%;
+    height: 100%;   
 }
-#contain-center{
+.contain-center{
     width: 80%;
-    height: 360vh;
+    height: auto;
     margin-top: 0vh;
     background: white;
-    z-index: -1;
     display: flex;
     justify-content: center;
 }
-#wrap-index{
-    width: 105%;
+.wrap-index{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     padding-top: 10%;
     padding-bottom: 12%;
 }
-#wrap-index img{
+.wrap-index a img{
     height: 110%;
     width: 40vw;
     clip-path: polygon(0 0, 75% 0, 100% 100%, 0 100%);
 }
-#image2 img{
+.wrap-index a #image2{
     clip-path: none;
     clip-path: polygon(25% 0, 100% 0, 100% 100%, 0 100%)
 }
-#wrap-index div{
+.wrap-index div{
     font-family: 'Cormorant Garamond', serif;
     font-size: 16px;
     font-weight: 600;
@@ -120,42 +121,73 @@ h3{
     margin-bottom: 10px;
     text-align: left;
 }
-#wrap-index div:nth-child(2){
+.wrap-index div:nth-child(2){
     text-align: none;
     text-align: right;
 }
-#wrap-index button{
-    width: 90px;
+.wrap-index button{
+    margin-top: 30px;
+    background-color: #55b041;
     height: 30px;
+    width: 95px;
+    border: none;
+}
+.wrap-index button a{
+    width: 100%;
+    height: 100%;
     font-size: 15px;
     color: white;
-    background-color: #55b041;
-    border: none;
     margin-top: 20px;
 }
-.wrap__news{
-    display: flex;
-    width: 200px
-}
-#global__title{
+.global__title{
     display: flex;
     justify-content: center;
     align-items: center;
 }
-#global__title h3{
+.global__title h3{
     padding: 2%;
 }
 .item{
-    padding: 5% 5%;
+    padding: 2% 2%;
 }
-.item img{
+.wrap__news{
+    display: flex;
+}
+.wrap__news .item{
+    width: 230px;
+    margin-right: 40px;
+}
+.wrap__news .item #img img{
+    width: 220px;
     border-radius: 5px;
+    position: relative;
+}
+.wrap__news .item #img .xemthem{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.wrap__news .item #img .xemthem a{
+    height: 30px;
+    width: 90px;
+    color: white;
+    font-weight: bold;
+    border: 3px solid white;
+}
+.wrap__news .item #img:hover > .xemthem{
+    display: block;
+}
+.wrap__news .item #img:hover img{
+    opacity: .5;
 }
 .item h4 a{
     font-family: Arial, Helvetica, sans-serif;
-    color: #509950;
+    color: #184425;
     font-weight: 500;
-    font-size: large;
+    font-size: 17px;
 }
 .doitac-title{
     width: 100vw;
@@ -165,24 +197,29 @@ h3{
     justify-content: center;
     align-items: center;
 }
-#branch{
+.branch{
     display: flex;
     padding: 0 15vw;
     justify-content: space-around;
     background-color: white;
 }
-#line-footer{
+.line-footer{
     width: 100vw;
     height: 5vh;
     background: url(line.png);
 }
-#main-footer{
+.main-footer{
     display: flex;
     justify-content: space-around;
     padding: 10vh 10vw;
     background-color: var(--primary-color);
 }
-#copyright{
+.fanpage{
+    height: fit-content;
+    width: fit-content;
+    border: 5px solid white;
+}
+.copyright{
     height: 4vh;
     padding-top: 7px;
     font-size: small;
@@ -190,7 +227,7 @@ h3{
     color: white;
     background-color: #1dbe1d;
 }
-.menu ul li.menu1{
+.menu ul li .menu1{
     position: relative;
 }
 .menu ul li.menu1 ul.menu2{
@@ -229,6 +266,7 @@ h3{
 #check{
     display: none;
 }
+
 @media (max-width: 952px) {
     .menu ul li{
         font-size: 20px;
@@ -238,7 +276,6 @@ h3{
         height: 30vh;
         width: 100vw;
     }
-
 }
 @media (max-width: 858px){
     .checkbtn{
@@ -255,6 +292,7 @@ h3{
         transition: all .5s;
         display: flex;
         flex-direction: column;
+        z-index: 1;
     }
     .menu ul li{
         display: block;
@@ -271,26 +309,23 @@ h3{
 @media (max-width: 575px) {
     .checkbtn{
         display: block;
-        left: 0%;
     }
-    .menu ul{
+    
+    .menu ul li a{
         position: fixed;
         width: 100%;
         height: 100%;
         background: #2ab057;
-        top: 100px;
-        left: -100%;
         transition: all .5s;
         display: flex;
-        flex-direction: column;
-    }
+    }                                                                                  
     .menu ul li{
         display: block;
-        margin-top: 20px;
-        padding-top: 100px;
+        margin-top: -20px;
+        padding-top: 0px;
     }
     .menu ul li a{
-        font-size: 30px;
+        font-size: 10px;
         font-weight: bolder;
     }
     #check:checked~ul{
