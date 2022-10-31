@@ -53,7 +53,7 @@ header .line-header{
 }
 .menu ul li a span:hover{
     color: white;
-    padding: 0 30px;
+    padding: 15px 30px;
     background-color:#184425;
 }
 .search form input{
@@ -88,6 +88,10 @@ header .line-header{
     display: flex;
     justify-content: center;
 }
+.main_container{
+    display: flex;
+    justify-content: center;
+}
 .wrap-index{
     display: flex;
     justify-content: space-around;
@@ -112,7 +116,7 @@ header .line-header{
     text-align: left;
     color: #509950;
 }
-h3{
+.wrap-index h3, .global__title h3,.doitac-title h3{
     font-family: 'Dancing Script';
     font-size: 50px;
     font-style: italic;
@@ -208,6 +212,9 @@ h3{
     justify-content: space-around;
     background-color: white;
 }
+.lienhe h3{
+    margin-bottom: 10px;
+}
 .line-footer{
     width: 100vw;
     height: 5vh;
@@ -219,7 +226,8 @@ h3{
     padding: 10vh 10vw;
     background-color: var(--primary-color);
 }
-.fanpage{
+.fb-page{
+    margin-top: 20px;
     height: fit-content;
     width: fit-content;
     border: 5px solid white;
@@ -271,29 +279,22 @@ h3{
 #check{
     display: none;
 }
-
-@media (max-width: 952px) {
-    .menu ul li{
-        font-size: 20px;
-        padding-left: 50px;
-    }
-    .menu{
-        height: 30vh;
-        width: 100vw;
+@media (max-width: 885px) {
+    .menu ul li span{
+        font-size: small;
+        padding-bottom: 30px;
     }
 }
-@media (max-width: 858px){
+@media (max-width: 768px){
     .checkbtn{
         display: block;
     }
     .menu ul{
         position: fixed;
-        width: 100%;
-        height: 120vh;
+        height: 150vh;
         background: #2ab057;
-        top: 100px;
-        left: -100%;
-        text-align: center;
+        top: 50px;
+        left: -80%;
         transition: all .5s;
         display: flex;
         flex-direction: column;
@@ -301,7 +302,7 @@ h3{
     }
     .menu ul li{
         display: block;
-        padding-top: 50px;
+        margin-top: 40px;
     }
     .menu ul li a{
         font-size: 20px;
@@ -315,19 +316,15 @@ h3{
     .checkbtn{
         display: block;
     }
-    
-    .menu ul li a{
-        position: fixed;
-        width: 100%;
-        height: 100%;
-        background: #2ab057;
-        transition: all .5s;
+    .menu ul li{
         display: flex;
+        flex-direction: column;
+        height: 100vh;
     }                                                                                  
     .menu ul li{
         display: block;
-        margin-top: -20px;
-        padding-top: 0px;
+        margin-top: 0px;
+        padding-top: 25px;
     }
     .menu ul li a{
         font-size: 10px;
